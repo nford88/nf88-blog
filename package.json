@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "vuepress dev blog",
     "build": "vuepress build blog",
-    "now-build": "npm run build"
+    "now-build": "npm run build && mv blog/.vuepress/dist dist"
   },
   "license": "MIT",
   "devDependencies": {
