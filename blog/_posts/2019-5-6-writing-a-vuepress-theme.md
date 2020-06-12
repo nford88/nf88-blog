@@ -43,7 +43,8 @@ Just one `Layout.vue` might not be enough, and you might also want to define mor
 
 So it's time to reorganize your theme, an agreed theme directory structure is as follows:
 
-::: vue
+
+```
 theme
 ├── `global-components`
 │   └── xxx.vue
@@ -61,7 +62,7 @@ theme
 ├── `index.js`
 ├── `enhanceApp.js`
 └── package.json
-:::
+```
 
 - `theme/global-components`: Components under this directory will be automatically registered as global components. For details, please refer to [@vuepress/plugin-register-components](https://github.com/vuejs/vuepress/tree/master/packages/@vuepress/plugin-register-components).
 - `theme/components`: Your components.

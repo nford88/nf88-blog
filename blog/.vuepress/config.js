@@ -1,7 +1,12 @@
 module.exports = {
-  title: 'VuePress Blog Example',
+  title: 'Nick Ford',
   description: 'This is a blog example built by VuePress',
-  theme: '@vuepress/theme-blog', // OR shortcut: @vuepress/blog
+  theme: '@vuepress/theme-blog',
+  head: [
+    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300&display=swap' }],
+  ],
+
+  // OR shortcut: @vuepress/blog
   themeConfig: {
     /**
      * Ref: https://vuepress-theme-blog.ulivz.com/#modifyblogpluginoptions
@@ -16,11 +21,7 @@ module.exports = {
       {
         text: 'Blog',
         link: '/',
-      },
-      {
-        text: 'Tags',
-        link: '/tag/',
-      },
+      }
     ],
     /**
      * Ref: https://vuepress-theme-blog.ulivz.com/#footer
@@ -29,11 +30,11 @@ module.exports = {
       contact: [
         {
           type: 'github',
-          link: 'https://github.com/ulivz',
+          link: 'https://github.com/nford88',
         },
         {
-          type: 'twitter',
-          link: 'https://twitter.com/_ulivz',
+          type: 'linkedin',
+          link: 'https://linkedin.com/nickford2',
         },
       ],
       copyright: [
