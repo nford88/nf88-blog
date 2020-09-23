@@ -22,7 +22,7 @@ This is second part of my article on migration. Part one is [here](/migration-1-
 
 In part one, I covered my pros and cons of having a VPS setup for personal projects. Whilst offering a near endless amount of control, the effort involved to maintain the upkeep of a VPS was time consuming but ultimately not great for my workflow. I was consistently worried about publishing projects that "weren't ready", which resulted in me not publishing projects at all. 
 
-I had been reading about the (JAM-stack concepts)[https://medium.com/notonlycss/why-the-jamstack-is-becoming-so-popular-a26133b12a30] last year and was fortunate enough to attend my local Javascript group meetup DublinJS where Chris Manson [twitter](https://twitter.com/real_ate) gave a talk about the stack, video of which is included below.
+I had been reading about the [JAM-stack concepts](https://medium.com/notonlycss/why-the-jamstack-is-becoming-so-popular-a26133b12a30) last year and was fortunate enough to attend my local Javascript group meetup DublinJS where Chris Manson [twitter](https://twitter.com/real_ate) gave a talk about the stack, video of which is included below.
 # 
 
 <div style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/eQULGb10MbQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
