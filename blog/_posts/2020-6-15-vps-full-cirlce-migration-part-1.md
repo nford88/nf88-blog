@@ -7,14 +7,15 @@ tag:
   - openvpn
 author: Nick  
 details: This is a blog consisting of articles on various tech topics
+permalink: /migration-1-vps-full-circle
 
 ---
 
-# Part 1 - Going full circle on the VPS!
+# Migration Part 1 - Going full circle on the VPS!
 
  Over the past few years, I've gone through plenty of different New Years Resolutions in attempt to try new workflows and projects. While many of these are well intentioned and help me learn a new skillet, many of them never see the light of day outside of my localhost address. The upside however of the current Covid situation has given me some time to attempt to assess long overdue tech debt and finally start a revamp of a new portfolio site come blog. Top of the tech debt list was to migrate away from my VPS which has been home for the last 3 years.
 
- This will be part one of a multi-part series. 
+ This will be part one of a multi-part series.  Edit: Part 2 is [here](/migration-2-embrace-the-jam) 
 
 # # 
 
@@ -24,7 +25,7 @@ details: This is a blog consisting of articles on various tech topics
 My very first portfolio website was created during my college degree in 2016, consisted of a shared hosting server with WordPress and MySQL, coming in at roughly about €8 a month. However the problems with shared hosting tend to come down to control, or severe lack of. I'm not going to go through the pitfalls of shared hosting but ultimately just paying to FTP into to a directory or using phpMyAdmin felt I wasn't getting much bang for my buck. As my skills developed, I knew a VPS server would give me greater control of resources for all the side projects I had dreamed of leaving the confines of my hard drive.
 
 
-![This is alt text](https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2382&q=80)
+![This is alt text](/images/hero-code.png)
 
 
 After about a year on shared hosting, I made the move to Linode Nano baseline VPS for $5 a month. This was a great call and ended up being more way more resources than I would ever need. Their panel is a breeze to use and setup my domain. I span up a Ubuntu droplet and in a few minutes the SSH keys to my new vehicle finally arrived. [VestaCP](https://vestacp.com/install/) was chosen for the admin panel, more for convenience as you can customise the panel options before creating the install script.  This handled the creation of web directories, proxying, detailed network logs and a webmail client configured to use the email address connected to my domain. This was a really nice bonus, particularly when I was applying for jobs. 

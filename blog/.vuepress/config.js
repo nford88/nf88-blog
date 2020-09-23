@@ -1,12 +1,9 @@
 module.exports = {
   title: 'Nick Ford',
   description: 'This is a blog example built by VuePress',
-  theme: '@vuepress/theme-blog',
   head: [
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300&display=swap' }],
   ],
-
-  // OR shortcut: @vuepress/blog
   themeConfig: {
     /**
      * Ref: https://vuepress-theme-blog.ulivz.com/#modifyblogpluginoptions
