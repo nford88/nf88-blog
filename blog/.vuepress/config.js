@@ -1,4 +1,5 @@
 module.exports = {
+  port: 8585,
   title: 'Nick Ford',
   description: 'This is a blog example built by VuePress',
   head: [
