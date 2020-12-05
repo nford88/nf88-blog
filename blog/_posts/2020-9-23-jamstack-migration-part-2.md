@@ -1,4 +1,5 @@
 ---
+home_post: true
 date: 2020-9-23
 tag: 
   - vps
@@ -11,7 +12,6 @@ tag:
 author: Nick  
 details: This is a blog consisting of articles on various tech topics
 permalink: /migration-2-embrace-the-jam
-
 ---
 
 # Migration Part 2 - Embrace the Jam!

@@ -18,8 +18,38 @@ module.exports = {
     nav: [
       {
         text: 'Blog',
-        link: '/',
+        link: '/blog/',
+      },
+      {
+        text: 'Further Down',
+        link: '/#base-list-layout',
       }
+    ],
+
+    directories: [
+      {
+        id: 'blog',
+        dirname: '_posts',
+        path: '/blog/',
+        pagination: {
+          lengthPerPage: 5,
+        },
+        layout: 'ListLayout'
+      },
+    ],
+
+    frontmatters: [
+      {
+        id: 'tag',
+        keys: ['tag', 'tags'],
+        path: '/tag/',
+      },
+      {
+        id: 'home',
+        keys: ['home_post'],
+        path: '/',
+        layout: 'HomeBlogLayout'
+      },
     ],
     /**
      * Ref: https://vuepress-theme-blog.ulivz.com/#footer

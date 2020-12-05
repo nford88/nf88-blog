@@ -1,8 +1,9 @@
 <template>
   <div>
-    <HomeComponent />
+    <p>Test</p>
     <div id="base-list-layout">
-    <div class="ui-posts" itemscope itemtype="http://schema.org/Blog">
+      <div class="ui-posts" itemscope itemtype="http://schema.org/Blog">
+        <h1>THIS IS THE HomeListLayout!</h1>
       <article
         v-for="page in pages"
         :key="page.key"
@@ -19,7 +20,7 @@
 
         <p class="ui-post-summary" itemprop="description">
           {{ page.frontmatter.summary || page.summary }}
-          <!-- <Content :page-key="page.key" slot-key="intro"/>-->
+          <Content :page-key="page.key" slot-key="intro"/>
         </p>
 
         <footer>
@@ -64,14 +65,13 @@
           </div>
         </footer>
       </article>
-    </div>
+      </div>
 
     <component
       :is="paginationComponent"
       v-if="$pagination.length > 1 && paginationComponent"
     ></component>
-  </div>
-
+    </div>
   </div>
 </template>
 
@@ -86,21 +86,18 @@ import {
   SimplePagination,
 } from '@vuepress/plugin-blog/lib/client/components'
 
-import CustomHomeHero from '../components/CustomHomeHero'
 
 export default {
   components: { 
     NavigationIcon, 
     ClockIcon, 
     TagIcon,
-    HomeComponent : CustomHomeHero
   },
   data() {
     return {
       paginationComponent: null,
     }
   },
-
   computed: {
     pages() {
       return this.$pagination.pages

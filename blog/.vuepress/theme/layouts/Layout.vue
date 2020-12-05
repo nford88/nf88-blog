@@ -1,18 +1,18 @@
 <template>
   <div>
-    <HomeListLayout v-if="$pagination" />
+    <ListLayout v-if="$pagination" />
     <Content v-else />
   </div>
 </template>
 
 <script>
 
-import HomeListLayout from './HomeListLayout'
+import ListLayout from './ListLayout'
 
 export default {
  components: {
-    HomeListLayout
-    } 
+    ListLayout
+  },
 }
 </script>
 

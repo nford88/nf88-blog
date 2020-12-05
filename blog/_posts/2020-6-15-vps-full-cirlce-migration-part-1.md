@@ -5,10 +5,10 @@ tag:
   - blog
   - vuepress
   - openvpn
+  - home
 author: Nick  
 details: This is a blog consisting of articles on various tech topics
 permalink: /migration-1-vps-full-circle
-
 ---
 
 # Migration Part 1 - Going full circle on the VPS!
