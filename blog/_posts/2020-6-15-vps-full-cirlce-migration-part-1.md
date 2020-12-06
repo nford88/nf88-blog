@@ -1,6 +1,6 @@
 ---
 date: 2020-6-15
-tag: 
+tags: 
   - vps
   - blog
   - vuepress
@@ -9,6 +9,9 @@ tag:
 author: Nick  
 details: This is a blog consisting of articles on various tech topics
 permalink: /migration-1-vps-full-circle
+image: images/hero-code.png
+home_post: true
+category: development
 ---
 
 # Migration Part 1 - Going full circle on the VPS!

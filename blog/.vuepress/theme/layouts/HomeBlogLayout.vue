@@ -1,7 +1,10 @@
 <template>
   <div>
-    <div id="base-list-layout">
-    <h1>HOMEPAGE BLOG LAYOUT</h1>
+    <div id="base-list-layout" class="home-blog">
+    <h1>Blog <Highlights></Highlights></h1>
+    <p>Some recent blog highlights. To view more 
+      <router-link to='blog/'> click here </router-link>
+    </p>
     <div class="ui-posts" itemscope itemtype="http://schema.org/Blog">
       <article
         v-for="page in pages"
@@ -12,57 +15,18 @@
         itemtype="https://schema.org/BlogPosting"
       >
         <meta itemprop="mainEntityOfPage" :content="page.path" />
-
+        
+        
         <header class="ui-post-title" itemprop="name headline">
           <NavLink :link="page.path">{{ page.title }}</NavLink>
+          <div v-if="page.frontmatter.category" class="category-chip">
+            <router-link :to="'blog/'+ page.frontmatter.category"> {{page.frontmatter.category}}</router-link>
+          </div>
         </header>
 
-        <p class="ui-post-summary" itemprop="description">
-          {{ page.frontmatter.summary || page.summary }}
-          <!-- <Content :page-key="page.key" slot-key="intro"/>-->
-        </p>
-
-        <footer>
-          <div
-            v-if="page.frontmatter.author"
-            class="ui-post-meta ui-post-author"
-            itemprop="publisher author"
-            itemtype="http://schema.org/Person"
-            itemscope
-          >
-            <NavigationIcon />
-            <span itemprop="name">{{ page.frontmatter.author }}</span>
-            <span v-if="page.frontmatter.location" itemprop="address">
-              &nbsp; in {{ page.frontmatter.location }}
-            </span>
-          </div>
-
-          <div v-if="page.frontmatter.date" class="ui-post-meta ui-post-date">
-            <ClockIcon />
-            <time
-              pubdate
-              itemprop="datePublished"
-              :datetime="page.frontmatter.date"
-            >
-              {{ resolvePostDate(page.frontmatter.date) }}
-            </time>
-          </div>
-
-          <div
-            v-if="page.frontmatter.tags"
-            class="ui-post-meta ui-post-tag"
-            itemprop="keywords"
-          >
-            <TagIcon />
-            <router-link
-              v-for="tag in resolvePostTags(page.frontmatter.tags)"
-              :key="tag"
-              :to="'/tag/' + tag"
-            >
-              {{ tag }}
-            </router-link>
-          </div>
-        </footer>
+        <div class="home-blog-hero">
+          <img v-if="page.frontmatter.image" :src="page.frontmatter.image"  />
+        </div>
       </article>
     </div>
   </div>
@@ -90,9 +54,12 @@ export default {
   },
   computed: {
     pages() {
-      return this.$site.pages.filter(i => {
+      const homeFilter = this.$site.pages.filter(i => {
         return i.frontmatter.hasOwnProperty("home_post")
       })
+      return homeFilter.sort((a, b) => 
+        new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+      )
     },
   },
 
@@ -116,6 +83,30 @@ export default {
 </script>
 
 <style lang="stylus">
+
+.home-blog-hero
+  width: 100%
+  height 250px
+  img 
+    width: 100%
+    height: 100%
+
+.home-blog
+  article
+    border: lightgrey solid 1px 
+    padding: 10px;
+  header
+    align-items center
+
+.category-chip
+  margin:0 auto;
+  padding-bottom 10px
+  a
+    background #3fb28f
+    padding 5px 5px
+    border-radius: 12px
+    font-size 1rem
+
 .common-layout
   .content-wrapper
     padding-bottom 80px
@@ -124,10 +115,6 @@ export default {
   padding-bottom 25px
   margin-bottom 25px
   border-bottom 1px solid $borderColor
-
-  &:last-child
-    border-bottom 0px
-    margin-bottom 0px
 
 .ui-post-title
   font-family PT Serif, Serif
