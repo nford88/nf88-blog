@@ -1,7 +1,6 @@
 <template>
-  <div>
-    <div id="base-list-layout" class="home-blog">
-    <h1>Blog <Highlights></Highlights></h1>
+    <div id="home-blog" class="home-blog">
+    <h1>Blog highlights</h1>
     <p>Some recent blog highlights. To view more 
       <router-link to='blog/'> click here </router-link>
     </p>
@@ -29,9 +28,6 @@
         </div>
       </article>
     </div>
-  </div>
-
-   
   </div>
 </template>
 
@@ -117,7 +113,7 @@ export default {
   border-bottom 1px solid $borderColor
 
 .ui-post-title
-  font-family PT Serif, Serif
+  font-family 'Arimo', sans-serif
   font-size 28px
   border-bottom 0
 

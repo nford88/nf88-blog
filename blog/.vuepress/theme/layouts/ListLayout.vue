@@ -1,9 +1,7 @@
 <template>
   <div>
-    <p>Test</p>
     <div id="base-list-layout">
       <div class="ui-posts" itemscope itemtype="http://schema.org/Blog">
-        <h1>THIS IS THE HomeListLayout!</h1>
       <article
         v-for="page in pages"
         :key="page.key"
@@ -151,7 +149,7 @@ export default {
     margin-bottom 0px
 
 .ui-post-title
-  font-family PT Serif, Serif
+  font-family: 'Arimo', sans-serif
   font-size 28px
   border-bottom 0
 

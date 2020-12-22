@@ -6,6 +6,7 @@
       @toggle-sidebar="isMobileHeaderOpen = !isMobileHeaderOpen"
     />
     <CustomHomeHero v-if="isHome"/>
+    <HomeAbout v-if="isHome"/>
     <div class="content-wrapper" @click="isMobileHeaderOpen = false">
       <DefaultGlobalLayout />
     </div>
@@ -19,7 +20,7 @@ import Header from '@theme/components/Header.vue'
 import MobileHeader from '@theme/components/MobileHeader.vue'
 import Footer from '@theme/components/Footer.vue'
 import CustomHomeHero from '../components/CustomHomeHero.vue'
-
+import HomeAbout from '../components/HomeAbout.vue'
 
 export default {
   components: {
@@ -27,7 +28,8 @@ export default {
     Header,
     MobileHeader,
     Footer,
-    CustomHomeHero
+    CustomHomeHero,
+    HomeAbout
   },
 
   data() {
