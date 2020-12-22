@@ -2,8 +2,5 @@
 home: true
 heroText: Nick Ford
 tagline: Nick
+layout: HomeBlogLayout
 ---
-
-# My blog
-
-Welcome to my blog

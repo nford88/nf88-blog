@@ -54,13 +54,7 @@ module.exports = {
         id: 'tag',
         keys: ['tag', 'tags'],
         path: '/tag/',
-      },
-      {
-        id: 'home',
-        keys: ['home_post'],
-        path: '/',
-        layout: 'HomeBlogLayout'
-      },
+      }
     ],
     /**
      * Ref: https://vuepress-theme-blog.ulivz.com/#footer
