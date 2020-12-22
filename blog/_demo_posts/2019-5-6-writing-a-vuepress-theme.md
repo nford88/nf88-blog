@@ -5,7 +5,8 @@ tag:
   - blog
   - vuepress
 author: ULIVZ
-location: Shanghai  
+location: Shanghai
+image: images/hero-code.png
 ---
 
 # Writing a VuePress theme

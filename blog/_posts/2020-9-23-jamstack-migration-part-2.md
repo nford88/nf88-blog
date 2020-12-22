@@ -11,7 +11,9 @@ tag:
 author: Nick  
 details: This is a blog consisting of articles on various tech topics
 permalink: /migration-2-embrace-the-jam
-
+image: images/jamstack.png
+home_post: true
+category: development
 ---
 
 # Migration Part 2 - Embrace the Jam!
