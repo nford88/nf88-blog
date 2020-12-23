@@ -4,8 +4,7 @@ module.exports = {
   title: 'Nick Ford',
   description: 'This is a blog example built by VuePress',
   head: [
-    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300&display=swap' }],
-    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Arimo&display=swap' }],
+    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Pacifico&family=Arimo:ital,wght@0,500;0,600;1,600&display=swap' }],
     ['script', {
       async: true,
       src: 'https://www.googletagmanager.com/gtag/js?id=G-HWMKXC3B9Q'

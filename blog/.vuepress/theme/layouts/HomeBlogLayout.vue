@@ -1,5 +1,5 @@
 <template>
-    <div id="home-blog" class="home-blog">
+    <div id="home-blog" class="home-blog home-page-main-class">
     <h1>Blog highlights</h1>
     <p>Some recent blog highlights. To view more 
       <router-link to='blog/'> click here </router-link>
@@ -18,14 +18,14 @@
         
         <header class="ui-post-title" itemprop="name headline">
           <NavLink :link="page.path">{{ page.title }}</NavLink>
-          <div v-if="page.frontmatter.category" class="category-chip">
-            <router-link :to="'blog/'+ page.frontmatter.category"> {{page.frontmatter.category}}</router-link>
-          </div>
         </header>
 
         <div class="home-blog-hero">
           <img v-if="page.frontmatter.image" :src="page.frontmatter.image"  />
         </div>
+        <div v-if="page.frontmatter.category" class="category-chip">
+            <span>{{page.frontmatter.category}}</span>
+          </div>
       </article>
     </div>
   </div>
@@ -81,42 +81,61 @@ export default {
 <style lang="stylus">
 
 .home-blog-hero
-  width: 100%
-  height 250px
+  max-width: 100%
+  height: 160px;
+  position: relative;
   img 
-    width: 100%
-    height: 100%
+    width: 100%;
+    max-height: 160px;
 
 .home-blog
   article
     border: lightgrey solid 1px 
-    padding: 10px;
+    box-sizing: border-box;  
+    margin: 5px 5px  
   header
     align-items center
 
 .category-chip
   margin:0 auto;
-  padding-bottom 10px
-  a
+  display: flex;
+  padding: 5px 2px;
+  justify-content: center;
+  span 
     background #3fb28f
+    padding-bottom 10px
     padding 5px 5px
     border-radius: 12px
-    font-size 1rem
+    font-size 0.8rem
 
 .common-layout
   .content-wrapper
     padding-bottom 80px
 
 .ui-post
-  padding-bottom 25px
   margin-bottom 25px
   border-bottom 1px solid $borderColor
 
+
+.ui-posts
+  display: flex;
+  flex-wrap: wrap;
+  article 
+    flex: 0 48%;
+    @media (max-width: $MQMobile)
+      flex: 0 100%;
+
+
 .ui-post-title
   font-family 'Arimo', sans-serif
-  font-size 28px
+  font-size: 1.2em;
+  min-height: 2.4em;
   border-bottom 0
-
+  font-style: normal;
+  font-weight: 600;
+  background: #d3d3d34a;
+  text-align: center;
+  padding: 2px 2px;
   a
     cursor pointer
     color $darkTextColor

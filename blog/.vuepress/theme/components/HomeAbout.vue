@@ -41,6 +41,7 @@ export default {
 
 <style lang="stylus">
 
-
+#home-about.content-wrapper
+  min-height:unset
 
 </style>

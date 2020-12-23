@@ -3,7 +3,8 @@
       <div class="hero-image">
       <div class="hero-container">
         <div class="hero-spiel">
-          <h3><span>Software developer</span>, front end focussed. <br>I work on wide ranging projects as well write about tech.</h3>
+          <h3><span>Software developer</span>, front end focussed.</h3> 
+          <h3>I work on wide ranging projects as well write about tech.</h3>
         </div>
         <div class="hero-box hero-left">
             <div @click="scrollTo('home-about')" class="btn button-green">
@@ -25,11 +26,8 @@ export default {
   methods: {
     scrollTo(id){
         const ele = document.getElementById(id);
-        // ele.getBoundingClientRect()
         const top = ele.closest('.content-wrapper');
-        console.log(top);
         top.scrollIntoView();
-        console.log(window);
       },
   },
 }
@@ -53,9 +51,11 @@ export default {
   justify-content center
   position relative
   padding 200px 200px 200px
+  margin: auto;
+  max-width: 740px;
   @media screen and (max-width: 787px)
     padding: 100px 15px  15px
-    padding-top calc((100vh / 2) - 200px)
+    padding-top calc(100vh / 4)
  
 .hero-image
     background-image: 
@@ -93,6 +93,7 @@ export default {
       margin-block-end: 0.5em;
       color black
       font-size: 1.8rem;
+      font-family 'Pacifico', cursive 
       @media screen and (max-width:500px)
         font-size:1.2rem;
 

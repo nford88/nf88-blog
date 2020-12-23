@@ -6,12 +6,10 @@
 html
   scroll-behavior smooth
 
-#app h1,h2
-  font-family 'Pacifico', cursive 
-
 #app p,h3,h4,h5,h6
   font-family 'Arimo', sans-serif
   font-weight 500
+
 a, a:hover
   color: black;
 
@@ -34,9 +32,6 @@ a, a:hover
   text-transform unset
   font-weight unset
 
-.vuepress-blog-theme-content
-  font-family 'Roboto', sans-serif
-
 .nav-link.router-link-active
   color #3fb28f!important
 
@@ -57,3 +52,17 @@ a.mobile-home-link.nav-link
   margin 0 auto
   max-width 740px
 
+.content__default > h1
+    font-family: 'Arimo', sans-serif;
+    font-size: 28px;
+    border-bottom: 0;
+
+.vuepress-blog-theme-content
+  font-family 'Arimo', sans-serif!important
+
+.home-page-main-class h1 
+  font-family 'Pacifico', cursive
+
+.content__default:not(.custom) > h1:first-child
+  padding-top: calc(80px + 1rem);
+  

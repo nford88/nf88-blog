@@ -5,8 +5,10 @@
       :is-open="isMobileHeaderOpen"
       @toggle-sidebar="isMobileHeaderOpen = !isMobileHeaderOpen"
     />
-    <CustomHomeHero v-if="isHome"/>
-    <HomeAbout v-if="isHome"/>
+    <div class="home-page-main-class">
+      <CustomHomeHero v-if="isHome"/>
+      <HomeAbout v-if="isHome"/>
+    </div>
     <div class="content-wrapper" @click="isMobileHeaderOpen = false">
       <DefaultGlobalLayout />
     </div>
