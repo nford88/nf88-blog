@@ -8,7 +8,7 @@ module.exports = {
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Arimo&display=swap' }],
   ],
   plugins: [
-    ['@vuepress/google-analytics', { 'ga': 'UA-114029634-1' }],
+    ['@vuepress/google-analytics', { ga: 'UA-114029634-1' }],
   ],
   themeConfig: {
     /**
