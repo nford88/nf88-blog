@@ -8,14 +8,14 @@ module.exports = {
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Arimo&display=swap' }],
     ['script', {
       async: true,
-      src: 'https://www.googletagmanager.com/gtag/js?id=UA-114029634-1'
+      src: 'https://www.googletagmanager.com/gtag/js?id=G-HWMKXC3B9Q'
     }],
     ['script', {}, `
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-  
-      gtag('config', 'UA-114029634-1');
+    
+      gtag('config', 'G-HWMKXC3B9Q');
   `],
   ],
   themeConfig: {
