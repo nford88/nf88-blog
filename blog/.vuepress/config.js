@@ -7,6 +7,9 @@ module.exports = {
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300&display=swap' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Arimo&display=swap' }],
   ],
+  plugins: [
+    ['@vuepress/plugin-google-analytics', { ga: 'UA-114029634-1' }],
+  ],
   themeConfig: {
     /**
      * Ref: https://vuepress-theme-blog.ulivz.com/#modifyblogpluginoptions
