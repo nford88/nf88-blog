@@ -6,14 +6,17 @@ module.exports = {
   head: [
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300&display=swap' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Arimo&display=swap' }],
-  ],
-  plugins: [
-    [
-      '@vuepress/google-analytics',
-      {
-        'ga': 'UA-114029634-1',
-      }
-    ]
+    ['script', {
+      async: true,
+      src: 'https://www.googletagmanager.com/gtag/js?id=UA-114029634-1'
+    }],
+    ['script', {}, `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'UA-114029634-1');
+  `],
   ],
   themeConfig: {
     /**
