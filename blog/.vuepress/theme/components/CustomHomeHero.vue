@@ -4,7 +4,7 @@
       <div class="hero-container">
         <div class="hero-spiel">
           <h3><span>Software developer</span>, front end focussed.</h3> 
-          <h3>I work on wide ranging projects as well write about tech.</h3>
+          <h3>I work on wide ranging projects as well as writing about tech.</h3>
         </div>
         <div class="hero-box hero-left">
             <div @click="scrollTo('home-about')" class="btn button-green">
@@ -52,7 +52,7 @@ export default {
   position relative
   padding 200px 200px 200px
   margin: auto;
-  max-width: 740px;
+  max-width: 1000px;
   @media screen and (max-width: 787px)
     padding: 100px 15px  15px
     padding-top calc(100vh / 4)

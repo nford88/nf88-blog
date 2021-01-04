@@ -117,78 +117,83 @@ export default {
   border-bottom 1px solid $borderColor
 
 
-.ui-posts
-  display: flex;
-  flex-wrap: wrap;
-  article 
-    flex: 0 48%;
-    @media (max-width: $MQMobile)
-      flex: 0 100%;
+.home-blog
+  .ui-posts
+    display: flex;
+    flex-wrap: wrap;
+    article 
+      flex: 0 48%;
+      @media (max-width: $MQMobile)
+        flex: 0 100%;
 
 
-.ui-post-title
-  font-family 'Arimo', sans-serif
-  font-size: 1.2em;
-  min-height: 2.4em;
-  border-bottom 0
-  font-style: normal;
-  font-weight: 600;
-  background: #d3d3d34a;
-  text-align: center;
-  padding: 2px 2px;
-  a
-    cursor pointer
-    color $darkTextColor
-    transition all 0.2s
-    text-decoration none
+  .ui-post-title
+    font-family 'Arimo', sans-serif
+    font-size: 1.2em;
+    min-height: 2.4em;
+    border-bottom 0
+    font-style: normal;
+    font-weight: 600;
+    background: #d3d3d34a;
+    text-align: center;
+    padding: 2px 2px;
+    a
+      cursor pointer
+      color $darkTextColor
+      transition all 0.2s
+      text-decoration none
 
-    &:hover
-      text-decoration underline
+      &:hover
+        text-decoration underline
 
-.ui-post-summary
-  font-size 14px
-  color rgba($darkTextColor, 0.54)
-  font-weight 200
+  .ui-post-summary
+    font-size 14px
+    color rgba($darkTextColor, 0.54)
+    font-weight 200
 
-.ui-post-meta
-  display inline-flex
-  align-items center
-  font-size 12px
-  line-height 12px
-
-  &:not(:last-child)
-    margin-bottom 3px
-    margin-right 20px
-
-  svg
-    margin-right 5px
-    width 14px
-    height 14px
-
-  @media (max-width: $MQMobile)
-    display flex
+  .ui-post-meta
+    display inline-flex
+    align-items center
+    font-size 12px
+    line-height 12px
 
     &:not(:last-child)
-      margin-bottom 10px
+      margin-bottom 3px
+      margin-right 20px
 
-.ui-post-author
-  color rgba($darkTextColor, 0.84)
-  font-weight 400
+    svg
+      margin-right 5px
+      width 14px
+      height 14px
 
-.ui-post-date
-  color rgba($darkTextColor, 0.54)
-  font-weight 200
+    @media (max-width: $MQMobile)
+      display flex
 
-.ui-post-tag
-  color rgba($darkTextColor, 0.54)
-  font-weight 200
+      &:not(:last-child)
+        margin-bottom 10px
 
-  a
-    color inherit
+  .ui-post-author
+    color rgba($darkTextColor, 0.84)
+    font-weight 400
+
+  .ui-post-date
+    color rgba($darkTextColor, 0.54)
     font-weight 200
-    text-decoration none
-    margin-right 5px
 
-    &:hover
-      color $accentColor
+  .ui-post
+    :last-child
+      padding-bottom: 2px 
+
+  .ui-post-tag
+    color rgba($darkTextColor, 0.54)
+    font-weight 200
+
+    a
+      color inherit
+      font-weight 200
+      text-decoration none
+      margin-right 5px
+
+      &:hover
+        color $accentColor
 </style>

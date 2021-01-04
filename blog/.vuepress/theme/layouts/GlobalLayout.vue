@@ -62,7 +62,7 @@ export default {
 .content-wrapper
   padding 160px 15px 80px 15px
   min-height calc(100vh - 80px - 60px - 160px)
-  max-width $contentWidth
+  max-width 1000px
   margin 0 auto
 
   @media (max-width: $MQMobile)
