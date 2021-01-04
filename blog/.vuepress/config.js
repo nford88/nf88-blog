@@ -1,8 +1,21 @@
+const cvPdf = 'https://nick-ford.com/NickFordDevCV011220.pdf';
 module.exports = {
+  port: 8585,
   title: 'Nick Ford',
-  description: 'This is a blog example built by VuePress',
+  description: 'Software Developer Blog and Portfolio Site',
   head: [
-    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300&display=swap' }],
+    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Pacifico&family=Arimo:ital,wght@0,500;0,600;1,600&display=swap' }],
+    ['script', {
+      async: true,
+      src: 'https://www.googletagmanager.com/gtag/js?id=G-HWMKXC3B9Q'
+    }],
+    ['script', {}, `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-HWMKXC3B9Q');
+  `],
   ],
   themeConfig: {
     /**
@@ -17,7 +30,40 @@ module.exports = {
     nav: [
       {
         text: 'Blog',
-        link: '/',
+        link: '/blog/',
+      },
+      {
+        text: 'CV',
+        link: cvPdf,
+      }
+    ],
+
+    directories: [
+      {
+        id: 'blog',
+        dirname: '_posts',
+        path: '/blog/',
+        pagination: {
+          lengthPerPage: 5,
+        },
+        layout: 'ListLayout'
+      },
+      {
+        id: 'demo',
+        dirname: '_demo_posts',
+        path: '/demo_posts/',
+        pagination: {
+          lengthPerPage: 5,
+        },
+        layout: 'ListLayout'
+      },
+    ],
+
+    frontmatters: [
+      {
+        id: 'tag',
+        keys: ['tag', 'tags'],
+        path: '/tag/',
       }
     ],
     /**

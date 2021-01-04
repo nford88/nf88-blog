@@ -5,6 +5,10 @@
       :is-open="isMobileHeaderOpen"
       @toggle-sidebar="isMobileHeaderOpen = !isMobileHeaderOpen"
     />
+    <div class="home-page-main-class">
+      <CustomHomeHero v-if="isHome"/>
+      <HomeAbout v-if="isHome"/>
+    </div>
     <div class="content-wrapper" @click="isMobileHeaderOpen = false">
       <DefaultGlobalLayout />
     </div>
@@ -17,6 +21,8 @@ import GlobalLayout from '@app/components/GlobalLayout.vue'
 import Header from '@theme/components/Header.vue'
 import MobileHeader from '@theme/components/MobileHeader.vue'
 import Footer from '@theme/components/Footer.vue'
+import CustomHomeHero from '../components/CustomHomeHero.vue'
+import HomeAbout from '../components/HomeAbout.vue'
 
 export default {
   components: {
@@ -24,11 +30,19 @@ export default {
     Header,
     MobileHeader,
     Footer,
+    CustomHomeHero,
+    HomeAbout
   },
 
   data() {
     return {
       isMobileHeaderOpen: false,
+    }
+  },
+
+  computed:{
+    isHome(){
+      return this.$route.path == '/';
     }
   },
 
@@ -41,13 +55,14 @@ export default {
 </script>
 
 <style lang="stylus">
+
 #vuepress-theme-blog__global-layout
   word-wrap break-word
 
 .content-wrapper
   padding 160px 15px 80px 15px
   min-height calc(100vh - 80px - 60px - 160px)
-  max-width $contentWidth
+  max-width 1000px
   margin 0 auto
 
   @media (max-width: $MQMobile)

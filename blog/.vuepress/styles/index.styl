@@ -3,18 +3,65 @@
  *
  * ref：https://v1.vuepress.vuejs.org/config/#index-styl
  */
+html
+  scroll-behavior smooth
+
+#app p,h3,h4,h5,h6
+  font-family 'Arimo', sans-serif
+  font-weight 500
+
+a, a:hover
+  color: black;
+
+.header-wrapper .header-right-wrap .search-box input:hover
+  border: 1px solid $greenAccent;
+  box-shadow: 0 0 5px $greenAccent;
 
 .home .hero img
   max-width 450px!important
 
 .header-wrapper .title a
-  font-family: 'Pacifico', cursive
-  font-style: normal;
-  font-weight: 400;
-  text-transform: lowercase
+  font-family 'Pacifico', cursive
+  font-style normal
+  font-weight 400
+  text-transform lowercase
+  color black!important
 
-.header-wrapper .header-right-wrap .nav .nav-item a  
-  font-family: 'Pacifico', cursive
+.header-wrapper .header-right-wrap .nav .nav-item a, #mobile-header .mobile-header-title .mobile-home-link  
+  font-family 'Pacifico', cursive
+  text-transform unset
+  font-weight unset
+
+.nav-link.router-link-active
+  color #3fb28f!important
+
+.mobile-menu-wrapper a.nav-link
+  font-family 'Pacifico', cursive
+
+a.mobile-home-link.nav-link
+  color:black!important
+
+.wide
+  background #3fb28f
+  position relative
+  width 100%
+  left 0
+  margin-bottom -50px
+
+.inner
+  margin 0 auto
+  max-width 1000px
+
+.content__default > h1
+    font-family: 'Arimo', sans-serif;
+    font-size: 28px;
+    border-bottom: 0;
 
 .vuepress-blog-theme-content
-  font-family: 'Roboto', sans-serif;
+  font-family 'Arimo', sans-serif!important
+
+.home-page-main-class h1 
+  font-family 'Pacifico', cursive
+
+.content__default:not(.custom) > h1:first-child
+  padding-top: calc(80px + 1rem);
