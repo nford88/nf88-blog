@@ -11,14 +11,14 @@ tag:
 author: Nick  
 details: This is a blog consisting of articles on various tech topics
 permalink: /migration-2-embrace-the-jam
-image: images/jamstack.png
+image: images/jam-stack.jpeg
 home_post: true
 category: development
 ---
 
 # Migration Part 2 - Embrace the Jam!
 
-![This is alt text](/images/jamstack.png)
+![This is alt text](/images/jam-stack.jpeg)
 
 This is second part of my article on migration. Part one is [here](/migration-1-vps-full-circle) 
 

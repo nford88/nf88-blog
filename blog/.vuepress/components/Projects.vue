@@ -1,9 +1,5 @@
 <template>
-    <div id="home-blogs" class="home-blog home-page-main-class">
-    <h1>Blog highlights</h1>
-    <p>Some recent blog highlights. To view more 
-      <router-link to='blog/'> click here </router-link>
-    </p>
+    <div id="home-blog" class="home-blog home-page-main-class">
     <div class="ui-posts" itemscope itemtype="http://schema.org/Blog">
       <article
         v-for="page in pages"
@@ -14,19 +10,17 @@
         itemtype="https://schema.org/BlogPosting"
       >
         <meta itemprop="mainEntityOfPage" :content="page.path" />
-        
-        
         <header class="ui-post-title" itemprop="name headline">
           <NavLink :link="page.path">{{ page.title }}</NavLink>
         </header>
-
         <div class="home-blog-hero">
-          <div v-if="page.frontmatter.category" class="category-chip">
-            <span>{{page.frontmatter.category}}</span>
+          <div v-if="page.frontmatter.tech" class="category-chip">
+            <span v-for="tech in page.frontmatter.tech">
+              {{tech}}
+              </span>
           </div>
           <img v-if="page.frontmatter.image" :src="page.frontmatter.image"  />
         </div>
-        
       </article>
     </div>
   </div>
@@ -51,43 +45,26 @@ export default {
   },
   computed: {
     pages() {
-      const homeFilter = this.$site.pages.filter(i => {
-        return i.frontmatter.hasOwnProperty("home_post")
+      const projects = this.$site.pages.filter(i => {
+        return i.frontmatter.hasOwnProperty("projects")
       })
-      return homeFilter.sort((a, b) => 
+      return projects.sort((a, b) => 
         new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
       )
-    },
-  },
-
-  created() {
-  },
-
-  methods: {
-
-    resolvePostDate(date) {
-      return dayjs(date).format(
-        this.$themeConfig.dateFormat || 'ddd MMM DD YYYY'
-      )
-    },
-
-    resolvePostTags(tags) {
-      if (!tags || Array.isArray(tags)) return tags
-      return [tags]
     },
   },
 }
 </script>
 
 <style lang="stylus">
+
 .home-blog-hero
   max-width: 100%
   position: relative;
   text-align: center;
   background: #f2f2f2;
-  height: 300px;
   img 
-    height: 100%;
+    height: 300px;
     object-fit: cover;
     width: 100%
 
@@ -126,7 +103,7 @@ export default {
       color white
       transition all 0.2s
       text-decoration none
-      max-width: 75%;
+      max-width: 50%;
 
       &:hover
         text-decoration underline
@@ -185,7 +162,7 @@ export default {
 
 .category-chip
   margin:0 auto;
-  right: 0;  
+  display: flex;
   padding: 5px 2px;
   position absolute;
   span 

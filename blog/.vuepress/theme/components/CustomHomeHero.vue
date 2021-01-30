@@ -12,7 +12,7 @@
           </div>
         </div>
         <div class="hero-box hero-right">
-          <div  @click="scrollTo('home-blog')"class="btn button-white">
+          <div  @click="scrollTo('home-blogs')"class="btn button-white">
             <h1>Blog</h1>
           </div>
         </div>
@@ -26,7 +26,8 @@ export default {
   methods: {
     scrollTo(id){
         const ele = document.getElementById(id);
-        const top = ele.closest('.content-wrapper');
+        const top = ele.parentNode;
+        console.warn(ele, top)
         top.scrollIntoView();
       },
   },
